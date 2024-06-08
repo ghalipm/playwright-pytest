@@ -55,5 +55,5 @@ def test_selecting_links_from_drop_downs(page: Page):
     page.locator("text=Amazon").click()
     page.wait_for_timeout(1000)
     print('\n', "------------------New Line --------------------")
-    print("Selected link: "+page.title())
+    print("Selected site: "+page.title())
     assert page.title().__contains__("Amazon"), f"Expected link to be 'Amazon', but got {page.title()}"
