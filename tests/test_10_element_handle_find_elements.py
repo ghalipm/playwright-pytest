@@ -1,7 +1,5 @@
 from playwright.sync_api import Page, ElementHandle
 
-from tests.conftest import page_with_ad_blocking
-
 
 def test_find_elements(page_with_ad_blocking: Page):
     # see page_with_ad_blocking fixture in conftest.py file

@@ -10,7 +10,8 @@ def test_profile_search(page: Page):
     # page.get_by_test_id("APjFqb").press_sequentially("Jensen Huang", delay=5)
 
     # the following each of them works
-    page.get_by_title("Search").press_sequentially("Jensen Huang", delay=50)
+    page.get_by_title("Search").press_sequentially("Jensen Huang", delay=500)
     # page.get_by_role("combobox").press_sequentially("Jensen Huang", delay=50)
     page.keyboard.press("Enter")
+    page.wait_for_timeout(1000)
     assert "Jensen Huang" in page.title()
